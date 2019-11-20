@@ -116,25 +116,29 @@ function moveTop() {
 	}
 }
 
-function dropLeaf() {
-	move();
+function bottomLeaf(){
 	putBeeper();
+	move();
+}
+
+function topLeaf() {
+	putBeeper();
+	turnRight();
+	move();
 }
 
 function westLeaf() {
-	turnAround();
-	dropLeaf();
+	bottomLeaf();
+	topLeaf();
 }
 
 function eastLeaf() {
-	turnRight();
-	dropLeaf();
+	topLeaf();
+	bottomLeaf();
 }
 
 function plantLeaves() {
 	westLeaf();
-	westLeaf();
-	eastLeaf();
 	eastLeaf();
 }
 
